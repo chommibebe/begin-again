@@ -7,7 +7,7 @@
         <h3 class="mgt-0">CASTING</h3>
 
         <ul>
-            <li ng-repeat="casting in BA_CONFIG.about.casting">
+            <li ng-repeat="casting in BA_CONFIG.about.casting track by $index">
                 <h5>{{casting.name}}</h5>
                 {{casting.actor}}
             </li>

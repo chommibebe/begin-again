@@ -10,8 +10,11 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
-    <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.css" />
+    <link rel="stylesheet" href="bower_components/blueimp-gallery/css/blueimp-gallery.css" />
+    <link rel="stylesheet" href="bower_components/blueimp-gallery/css/blueimp-gallery-indicator.css" />
+    <link rel="stylesheet" href="bower_components/blueimp-gallery/css/blueimp-gallery-video.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -35,7 +38,7 @@
                    smooth-scroll target="main">{{BA_CONFIG.title}}</a>
             </div>
             <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav pull-right">
+                <ul class="nav navbar-nav">
                     <li ng-repeat="menu in BA_CONFIG.header.menus track by $index">
                         <a class="cursor-pointer"
                            smooth-scroll target="{{menu.url}}" offset="100">{{menu.name}}</a>
@@ -51,16 +54,19 @@
 <!-- Add your site or application content here -->
 <div class="container">
     <div id="about" ng-include="'views/about.html'" ng-controller="AboutCtrl"></div>
-    <div id="gallery" ng-include="'views/gallery.html'" ng-controller="GalleryCtrl"></div>
-    <div id="ost" ng-include="'views/ost.html'" ng-controller="OstCtrl"></div>
-    <div id="movie" ng-include="'views/movie.html'" ng-controller="MovieCtrl"></div>
+    <div id="gallery" class="gallery" ng-include="'views/gallery.html'" ng-controller="GalleryCtrl"></div>
+    <div id="ost" class="gallery" ng-include="'views/ost.html'" ng-controller="OstCtrl"></div>
+    <div id="movie" class="gallery movie" ng-include="'views/movie.html'" ng-controller="MovieCtrl"></div>
 </div>
-
 
 <div class="container-fluid">
     <div class="footer">
         <p>{{BA_CONFIG.footer.copyright}}</p>
     </div>
+</div>
+
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <div class="slides"></div>
 </div>
 
 <!-- build:js(.) scripts/oldieshim.js -->
@@ -84,6 +90,13 @@
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="bower_components/flat-ui/dist/js/flat-ui.js"></script>
 <script src="bower_components/angular-smoothscroll/dist/scripts/bb15da28.scripts.js"></script>
+<script src="bower_components/blueimp-gallery/js/blueimp-helper.js"></script>
+<script src="bower_components/blueimp-gallery/js/blueimp-gallery.js"></script>
+<script src="bower_components/blueimp-gallery/js/blueimp-gallery-fullscreen.js"></script>
+<script src="bower_components/blueimp-gallery/js/blueimp-gallery-indicator.js"></script>
+<script src="bower_components/blueimp-gallery/js/blueimp-gallery-video.js"></script>
+<script src="bower_components/blueimp-gallery/js/blueimp-gallery-vimeo.js"></script>
+<script src="bower_components/blueimp-gallery/js/blueimp-gallery-youtube.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -92,5 +105,16 @@
 <script src="scripts/config.js"></script>
 <script src="scripts/controllers.js"></script>
 <!-- endbuild -->
+<script>
+    $(document).on('click', '#gallery', function (event) {
+        event.preventDefault();
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+                link = target.src ? target.parentNode : target,
+                options = {index: link, event: event},
+                links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    });
+</script>
 </body>
 </html>

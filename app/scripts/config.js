@@ -100,46 +100,55 @@
     "ost": [
       {
         "url": "http://youtu.be/VJkuYkyj2Wk",
+        "poster": "poster.jpg",
         "name": "Lost Stars lyrics by Adam Levine",
         "index": 0
       },
       {
         "url": "http://youtu.be/LZRHYp73GlA",
+        "poster": "poster.jpg",
         "name": "Tell Me If You Wanna Go Home lyrics by Keira Knightley",
         "index": 1
       },
       {
         "url": "http://youtu.be/urINeopTXQs",
+        "poster": "poster.jpg",
         "name": "No One Else Like You lyrics by Adam Levine",
         "index": 2
       },
       {
         "url": "http://youtu.be/PHj7LdKy9Yw",
+        "poster": "poster.jpg",
         "name": "Horny lyrics by Cee Lo Green",
         "index": 3
       },
       {
         "url": "http://youtu.be/sLTRSakuugs",
+        "poster": "poster.jpg",
         "name": "Lost Stars lyrics by Keira Knightley",
         "index": 4
       },
       {
         "url": "http://youtu.be/bvSLW4ZKI-A",
+        "poster": "poster.jpg",
         "name": "A Higher Place lyrics by Adam Levine",
         "index": 5
       },
       {
         "url": "http://youtu.be/_LFiPqAwIkQ",
+        "poster": "poster.jpg",
         "name": "Like A Fool lyrics by Keira Knightley",
         "index": 6
       },
       {
         "url": "http://youtu.be/Zy2lFVlRFA0",
+        "poster": "poster.jpg",
         "name": "Did it ever cross your mind lyrics by Cessyl Orchestra",
         "index": 7
       },
       {
         "url": "http://youtu.be/bKxodgpyGec",
+        "poster": "poster.jpg",
         "name": "Woman of the world lyrics by Cee Lo Green",
         "index": 8
       }
@@ -147,21 +156,25 @@
     "movie": [
       {
         "url": "http://youtu.be/uTRCxOE7Xzc",
+        "poster": "poster.jpg",
         "name": "Movie trailer 1",
         "index": 0
       },
       {
         "url": "http://youtu.be/rbf5TPL81ag",
+        "poster": "poster.jpg",
         "name": "Movie trailer 2",
         "index": 1
       },
       {
         "url": "http://youtu.be/nlp7ywUD8wc",
+        "poster": "poster.jpg",
         "name": "Coming Up Roses",
         "index": 2
       },
       {
         "url": "http://youtu.be/rtZSgDjoqNo",
+        "poster": "poster.jpg",
         "name": "BEGIN AGAIN Interviews",
         "index": 3
       }
