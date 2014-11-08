@@ -15,20 +15,10 @@ angular
     'ngResource',
     'ngSanitize',
     'ngTouch',
-    'ui.router',
-    'ui.select'
+    'angularSmoothscroll'
   ])
-  .config(function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/');
-    $stateProvider
-      .state('main', {
-        url: '/',
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .state('about', {
-        url: '/about',
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      });
+  .config(function () {
+  })
+  .run(function ($rootScope, BA_CONFIG) {
+    $rootScope.BA_CONFIG = BA_CONFIG;
   });

@@ -1,0 +1,23 @@
+body {
+    font-family: "Nanum Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-top: 60px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.mg-0 {
+    margin: 0;
+}
+.mgt-0 {
+    margin-top: 0;
+}
+
+.pd-0 {
+    margin: 0;
+}

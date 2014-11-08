@@ -10,10 +10,9 @@
     "angular-sanitize": "~1.2.0",
     "angular-animate": "~1.2.0",
     "angular-touch": "~1.2.0",
-    "ui-router": "~0.2.11",
     "bootstrap": "~3.3.0",
-    "angular-ui-select": "~0.8.3",
-    "flat-ui": "~2.2.1"
+    "flat-ui": "~2.2.1",
+    "angular-smoothscroll": "~1.1.1"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.0",

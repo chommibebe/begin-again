@@ -1,1 +1,26 @@
-<p>This is the about view.</p>
+<h2 class="page-header text-center">{{BA_CONFIG.header.menus[0].name}}</h2>
+<div class="row">
+    <div class="col-md-6">
+        <img src="images/example-image.jpg" alt="example-image" class="img-rounded img-responsive">
+    </div>
+    <div class="col-md-6">
+        <h3 class="mgt-0">CASTING</h3>
+
+        <ul>
+            <li ng-repeat="casting in BA_CONFIG.about.casting">
+                <h5>{{casting.name}}</h5>
+                {{casting.actor}}
+            </li>
+        </ul>
+        <p ng-bind-html="BA_CONFIG.about.content"></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h3>SUMMARY</h3>
+
+        <h5>{{BA_CONFIG.about.summary.title}}</h5>
+
+        <p ng-bind-html="BA_CONFIG.about.summary.content"></p>
+    </div>
+</div>
