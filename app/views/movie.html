@@ -1,4 +1,6 @@
-<h2 class="page-header text-center">{{BA_CONFIG.header.menus[3].name}}</h2>
+<h2 class="page-header text-center">
+    <span>{{BA_CONFIG.header.menus[3].name}}</span>
+</h2>
 <div class="row">
     <div class="col-md-12">
         <a title="{{BA_CONFIG.movie[0].name}}" href="{{BA_CONFIG.movie[0].url}}" target="_blank">
@@ -7,9 +9,12 @@
     </div>
     <div class="col-md-4"
          ng-repeat="movie in BA_CONFIG.movie track by $index"
-         ng-if="$index > 0" >
-        <a title="{{movie.name}}" href="{{movie.url}}" target="_blank">
-            <img ng-src="images/{{movie.poster}}" alt="{{movie.name}}">
+         ng-if="$index > 0">
+        <a title="{{movie.name}}" href="{{movie.url}}" type="text/html"
+           data-poster="http://img.youtube.com/vi/zi4CIXpx7Bg/0.jpg"
+           data-youtube="zi4CIXpx7Bg" data-gallery>
         </a>
+        <a href="https://www.youtube.com/watch?v=zi4CIXpx7Bg" type="text/html" data-youtube="zi4CIXpx7Bg" data-gallery>LES
+            TWINS - An Industry Ahead</a>
     </div>
 </div>
