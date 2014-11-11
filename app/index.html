@@ -39,8 +39,8 @@
                     <a class="navbar-brand cursor-pointer"
                        smooth-scroll target="main">{{BA_CONFIG.title}}</a>
                 </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav pull-right">
+                <div class="collapse navbar-collapse" id="navbar-collapse-01">
+                    <ul class="nav navbar-nav">
                         <li ng-repeat="menu in BA_CONFIG.header.menus track by $index">
                             <a class="cursor-pointer"
                                smooth-scroll target="{{menu.url}}" offset="100">{{menu.name}}</a>
@@ -91,7 +91,6 @@
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="bower_components/flat-ui/dist/js/flat-ui.js"></script>
 <script src="bower_components/angular-smoothscroll/dist/scripts/bb15da28.scripts.js"></script>
 <script src="bower_components/blueimp-gallery/js/blueimp-helper.js"></script>
 <script src="bower_components/blueimp-gallery/js/blueimp-gallery.js"></script>
