@@ -99,55 +99,55 @@
         ],
         "ost": [
             {
-                "url": "http://youtu.be/VJkuYkyj2Wk",
+                "url": "https://www.youtube.com/embed/VJkuYkyj2Wk?enablejsapi=1&wmode=opaque",
                 "poster": "img_09.png",
                 "name": "Lost Stars lyrics by Adam Levine",
                 "index": 0
             },
             {
-                "url": "http://youtu.be/LZRHYp73GlA",
+                "url": "https://www.youtube.com/embed/LZRHYp73GlA?enablejsapi=1&wmode=opaque",
                 "poster": "img_10.png",
                 "name": "Tell Me If You Wanna Go Home lyrics by Keira Knightley",
                 "index": 1
             },
             {
-                "url": "http://youtu.be/urINeopTXQs",
+                "url": "https://www.youtube.com/embed/urINeopTXQs?enablejsapi=1&wmode=opaque",
                 "poster": "img_11.png",
                 "name": "No One Else Like You lyrics by Adam Levine",
                 "index": 2
             },
             {
-                "url": "http://youtu.be/PHj7LdKy9Yw",
+                "url": "https://www.youtube.com/embed/PHj7LdKy9Yw?enablejsapi=1&wmode=opaque",
                 "poster": "img_12.png",
                 "name": "Horny lyrics by Cee Lo Green",
                 "index": 3
             },
             {
-                "url": "http://youtu.be/sLTRSakuugs",
+                "url": "https://www.youtube.com/embed/sLTRSakuugs?enablejsapi=1&wmode=opaque",
                 "poster": "img_13.png",
                 "name": "Lost Stars lyrics by Keira Knightley",
                 "index": 4
             },
             {
-                "url": "http://youtu.be/bvSLW4ZKI-A",
+                "url": "https://www.youtube.com/embed/bvSLW4ZKI-A?enablejsapi=1&wmode=opaque",
                 "poster": "img_14.png",
                 "name": "A Higher Place lyrics by Adam Levine",
                 "index": 5
             },
             {
-                "url": "http://youtu.be/_LFiPqAwIkQ",
+                "url": "https://www.youtube.com/embed/_LFiPqAwIkQ?enablejsapi=1&wmode=opaque",
                 "poster": "img_15.png",
                 "name": "Like A Fool lyrics by Keira Knightley",
                 "index": 6
             },
             {
-                "url": "http://youtu.be/Zy2lFVlRFA0",
+                "url": "https://www.youtube.com/embed/Zy2lFVlRFA0?enablejsapi=1&wmode=opaque",
                 "poster": "img_16.png",
                 "name": "Did it ever cross your mind lyrics by Cessyl Orchestra",
                 "index": 7
             },
             {
-                "url": "http://youtu.be/bKxodgpyGec",
+                "url": "https://www.youtube.com/embed/bKxodgpyGec?enablejsapi=1&wmode=opaque",
                 "poster": "img_17.png",
                 "name": "Woman of the world lyrics by Cee Lo Green",
                 "index": 8
@@ -156,28 +156,28 @@
         "movie": [
             {
                 "_id": "uTRCxOE7Xzc",
-                "url": "http://youtu.be/uTRCxOE7Xzc",
+                "url": "https://www.youtube.com/embed/uTRCxOE7Xzc?enablejsapi=1&wmode=opaque",
                 "poster": "img_18.jpg",
                 "name": "Movie trailer 1",
                 "index": 0
             },
             {
                 "_id": "rbf5TPL81ag",
-                "url": "http://youtu.be/rbf5TPL81ag",
+                "url": "https://www.youtube.com/embed/rbf5TPL81ag?enablejsapi=1&wmode=opaque",
                 "poster": "img_19.jpg",
                 "name": "Movie trailer 2",
                 "index": 1
             },
             {
                 "_id": "nlp7ywUD8wc",
-                "url": "http://youtu.be/nlp7ywUD8wc",
+                "url": "https://www.youtube.com/embed/nlp7ywUD8wc?enablejsapi=1&wmode=opaque",
                 "poster": "img_20.jpg",
                 "name": "Coming Up Roses",
                 "index": 2
             },
             {
                 "_id": "rtZSgDjoqNo",
-                "url": "http://youtu.be/rtZSgDjoqNo",
+                "url": "https://www.youtube.com/embed/rtZSgDjoqNo?enablejsapi=1&wmode=opaque",
                 "poster": "img_21.jpg",
                 "name": "BEGIN AGAIN Interviews",
                 "index": 3
