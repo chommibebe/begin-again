@@ -12,10 +12,8 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.css" />
-    <link rel="stylesheet" href="bower_components/blueimp-gallery/css/blueimp-gallery.css" />
-    <link rel="stylesheet" href="bower_components/blueimp-gallery/css/blueimp-gallery-indicator.css" />
-    <link rel="stylesheet" href="bower_components/blueimp-gallery/css/blueimp-gallery-video.css" />
     <!-- endbower -->
+    <link rel="stylesheet" href="bower_components/fancybox/source/jquery.fancybox.css"/>
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -58,10 +56,15 @@
 <div class="container">
     <div id="about" class="page-about" ng-include="'views/about.html'" ng-controller="AboutCtrl"></div>
     <div id="gallery" class="page-gallery" ng-include="'views/gallery.html'" ng-controller="GalleryCtrl"></div>
-    <div id="ost" class="page-ost" ng-include="'views/ost.html'" ng-controller="OstCtrl"></div>
+</div>
+<div class="container-fluid page-ost__wrapper">
+    <div class="container">
+        <div id="ost" class="page-ost" ng-include="'views/ost.html'" ng-controller="OstCtrl"></div>
+    </div>
+</div>
+<div class="container">
     <div id="movie" class="page-movie" ng-include="'views/movie.html'" ng-controller="MovieCtrl"></div>
 </div>
-
 <div class="container-fluid footer">
     <div class="container text-center">
         <p class="footer__copyright">{{BA_CONFIG.footer.copyright}}</p>
@@ -93,31 +96,60 @@
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="bower_components/flat-ui/dist/js/flat-ui.js"></script>
 <script src="bower_components/angular-smoothscroll/dist/scripts/bb15da28.scripts.js"></script>
-<script src="bower_components/blueimp-gallery/js/blueimp-helper.js"></script>
-<script src="bower_components/blueimp-gallery/js/blueimp-gallery.js"></script>
-<script src="bower_components/blueimp-gallery/js/blueimp-gallery-fullscreen.js"></script>
-<script src="bower_components/blueimp-gallery/js/blueimp-gallery-indicator.js"></script>
-<script src="bower_components/blueimp-gallery/js/blueimp-gallery-video.js"></script>
-<script src="bower_components/blueimp-gallery/js/blueimp-gallery-vimeo.js"></script>
-<script src="bower_components/blueimp-gallery/js/blueimp-gallery-youtube.js"></script>
 <!-- endbower -->
+<script src="bower_components/fancybox/source/jquery.fancybox.js"></script>
 <!-- endbuild -->
-
+<script src="http://www.youtube.com/player_api"></script>
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
 <script src="scripts/config.js"></script>
 <script src="scripts/controllers.js"></script>
 <!-- endbuild -->
 <script>
-    $(document).on('click', '#gallery', function (event) {
-        event.preventDefault();
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-                link = target.src ? target.parentNode : target,
-                options = {index: link, event: event},
-                links = this.getElementsByTagName('a');
-        blueimp.Gallery(links, options);
+    $('#gallery a').fancybox({
+        helpers: {
+            title: {
+                type: 'float'
+            }
+        }
     });
+
+    // Fires whenever a player has finished loading
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+
+    // Fires when the player's state changes.
+    function onPlayerStateChange(event) {
+        // Go to the next video after the current one is finished playing
+        if (event.data === 0) {
+            $.fancybox.next();
+        }
+    }
+    var option = {
+        openEffect: 'none',
+        closeEffect: 'none',
+        nextEffect: 'none',
+        prevEffect: 'none',
+        padding: 0,
+        margin: 50,
+        beforeShow: function () {
+            // Find the iframe ID
+            var id = $.fancybox.inner.find('iframe').attr('id');
+
+            // Create video player object and add event listeners
+            var player = new YT.Player(id, {
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+    };
+
+    $('#ost a').fancybox(option);
+
+    $('#movie a').fancybox(option);
 </script>
 </body>
 </html>

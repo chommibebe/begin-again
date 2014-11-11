@@ -155,6 +155,9 @@ body {
 }
 
 /* OST */
+.page-ost__wrapper {
+  background-color: #D1EEF4;
+}
 
 .page-ost img {
   width: 100%;
