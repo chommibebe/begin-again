@@ -34,7 +34,13 @@ body {
   font-weight: 400;
   text-transform: uppercase;
 }
-
+.navbar-inverse .navbar-toggle:hover:before, .navbar-inverse .navbar-toggle:focus:before,
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+  color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  color: #b0b0b0;
+}
 .cursor-pointer {
   cursor: pointer;
 }
