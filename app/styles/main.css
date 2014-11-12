@@ -20,22 +20,17 @@ body {
 
 /* Header */
 .navbar {
-  min-height: 100px;
   background-color: #575757;
 }
 
 .navbar-brand {
   color: #FFF;
-  font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 38px 21px;
 }
 
 .navbar-nav > li > a {
-  padding: 38px 21px;
   color: #FFF;
-  font-size: 28px;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -58,10 +53,6 @@ body {
 
 .pd-0 {
   margin: 0;
-}
-
-.navbar-toggle {
-  margin: 20px 0 0 21px;
 }
 
 .navbar-inverse .navbar-collapse {
