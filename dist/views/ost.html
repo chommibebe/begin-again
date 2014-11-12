@@ -1,1 +1,11 @@
-<h2 class="page-header text-center"> <span>{{BA_CONFIG.header.menus[2].name}}</span> </h2> <div class="row"> <div class="col-md-4" ng-repeat="ost in BA_CONFIG.ost track by $index"> <a class="fancybox fancybox.iframe" title="{{ost.name}}" href="{{ost.url}}" data-youtube="{{ost.id}}"> <img ng-src="images/{{ost.poster}}" alt="{{ost.name}}"> </a> </div> </div>
+<h2 class="page-header text-center">
+    <span>{{BA_CONFIG.header.menus[2].name}}</span>
+</h2>
+<div class="row">
+    <div class="col-md-4"
+         ng-repeat="ost in BA_CONFIG.ost track by $index" >
+        <a class="fancybox fancybox.iframe" title="{{ost.name}}" href="{{ost.url}}" data-youtube="{{ost.id}}">
+            <img ng-src="images/{{ost.poster}}" alt="{{ost.name}}">
+        </a>
+    </div>
+</div>
