@@ -1,112 +1,9 @@
-<!doctype html>
-<html class="no-js" ng-app="beginAgainApp">
-<head>
-    <meta charset="utf-8">
-    <title>{{BA_CONFIG.title}}</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-
-    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css"/>
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.css" />
-    <!-- endbower -->
-    <link rel="stylesheet" href="bower_components/fancybox/source/jquery.fancybox.css"/>
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-</head>
-<body>
-<!--[if lt IE 7]>
+<!doctype html> <html class="no-js" ng-app="beginAgainApp"> <head> <meta charset="utf-8"> <title>{{BA_CONFIG.title}}</title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.css"> <link rel="stylesheet" href="styles/main.css">  <body> <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
-<![endif]-->
-
-<div class="container-fluid">
-    <div class="header">
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse"
-                            data-target="#navbar-collapse-01">
-                        <span class="sr-only">Toggle navigation</span>
-                    </button>
-                    <a class="navbar-brand cursor-pointer"
-                       smooth-scroll target="main">{{BA_CONFIG.title}}</a>
-                </div>
-                <div class="collapse navbar-collapse" id="navbar-collapse-01">
-                    <ul class="nav navbar-nav">
-                        <li ng-repeat="menu in BA_CONFIG.header.menus track by $index">
-                            <a class="cursor-pointer"
-                               smooth-scroll target="{{menu.url}}" offset="100">{{menu.name}}</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-
-    <div id="main" data-menu-offset="-500" ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
-</div>
-
-<!-- Add your site or application content here -->
-<div class="container">
-    <div id="about" class="page-about" ng-include="'views/about.html'" ng-controller="AboutCtrl"></div>
-    <div id="gallery" class="page-gallery" ng-include="'views/gallery.html'" ng-controller="GalleryCtrl"></div>
-</div>
-<div class="container-fluid page-ost__wrapper">
-    <div class="container">
-        <div id="ost" class="page-ost" ng-include="'views/ost.html'" ng-controller="OstCtrl"></div>
-    </div>
-</div>
-<div class="container">
-    <div id="movie" class="page-movie" ng-include="'views/movie.html'" ng-controller="MovieCtrl"></div>
-</div>
-<div class="container-fluid footer">
-    <div class="container text-center">
-        <p class="footer__copyright">{{BA_CONFIG.footer.copyright}}</p>
-    </div>
-</div>
-
-<div id="blueimp-gallery" class="blueimp-gallery">
-    <div class="slides"></div>
-</div>
-
-<!-- build:js(.) scripts/oldieshim.js -->
-<!--[if lt IE 9]>
-<script src="bower_components/es5-shim/es5-shim.js"></script>
-<script src="bower_components/json3/lib/json3.js"></script>
-<![endif]-->
-<!-- endbuild -->
-
-<script src="//vjs.zencdn.net/4.7/video.js"></script>
-
-<!-- build:js(.) scripts/vendor.js -->
-<!-- bower:js -->
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-resource.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-cookies.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-sanitize.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-touch.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="bower_components/flat-ui/dist/js/flat-ui.js"></script>
-<script src="bower_components/angular-smoothscroll/dist/scripts/bb15da28.scripts.js"></script>
-<!-- endbower -->
-<script src="bower_components/fancybox/source/jquery.fancybox.js"></script>
-<!-- endbuild -->
-<script src="http://www.youtube.com/player_api"></script>
-<!-- build:js({.tmp,app}) scripts/scripts.js -->
-<script src="scripts/app.js"></script>
-<script src="scripts/config.js"></script>
-<script src="scripts/controllers.js"></script>
-<!-- endbuild -->
-<script>
-    $('#gallery a').fancybox({
+<![endif]--> <div class="container-fluid"> <div class="header"> <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"> <div class="container"> <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01"> <span class="sr-only">Toggle navigation</span> </button> <a class="navbar-brand cursor-pointer" smooth-scroll target="main">{{BA_CONFIG.title}}</a> </div> <div class="collapse navbar-collapse" id="navbar-collapse-01"> <ul class="nav navbar-nav"> <li ng-repeat="menu in BA_CONFIG.header.menus track by $index"> <a class="cursor-pointer" smooth-scroll target="{{menu.url}}" offset="100">{{menu.name}}</a> </li> </ul> </div> </div> </nav> </div> <div id="main" data-menu-offset="-500" ng-include="'views/main.html'" ng-controller="MainCtrl"></div> </div> <!-- Add your site or application content here --> <div class="container"> <div id="about" class="page-about" ng-include="'views/about.html'" ng-controller="AboutCtrl"></div> <div id="gallery" class="page-gallery" ng-include="'views/gallery.html'" ng-controller="GalleryCtrl"></div> </div> <div class="container-fluid page-ost__wrapper"> <div class="container"> <div id="ost" class="page-ost" ng-include="'views/ost.html'" ng-controller="OstCtrl"></div> </div> </div> <div class="container"> <div id="movie" class="page-movie" ng-include="'views/movie.html'" ng-controller="MovieCtrl"></div> </div> <div class="container-fluid footer"> <div class="container text-center"> <p class="footer__copyright">{{BA_CONFIG.footer.copyright}}</p> </div> </div> <div id="blueimp-gallery" class="blueimp-gallery"> <div class="slides"></div> </div> <!--[if lt IE 9]>
+<script src="scripts/oldieshim.js"></script>
+<![endif]--> <script src="//vjs.zencdn.net/4.7/video.js"></script> <script src="scripts/vendor.js"></script> <script src="http://www.youtube.com/player_api"></script> <script src="scripts/scripts.js"></script> <script>$('#gallery a').fancybox({
         helpers: {
             title: {
                 type: 'float'
@@ -149,7 +46,4 @@
 
     $('#ost a').fancybox(option);
 
-    $('#movie a').fancybox(option);
-</script>
-</body>
-</html>
+    $('#movie a').fancybox(option);</script>  
