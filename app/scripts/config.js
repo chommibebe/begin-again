@@ -99,7 +99,7 @@
         ],
         "ost": [
             {
-                "url": "https://www.youtube.com/embed/VJkuYkyj2Wk?enablejsapi=1&wmode=opaque",
+                "url": "youtu.be/VJkuYkyj2Wk",
                 "poster": "img_09.png",
                 "name": "Lost Stars lyrics by Adam Levine",
                 "index": 0
