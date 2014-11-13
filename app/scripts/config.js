@@ -99,12 +99,6 @@
         ],
         "ost": [
             {
-                "url": "youtu.be/VJkuYkyj2Wk",
-                "poster": "img_09.png",
-                "name": "Lost Stars lyrics by Adam Levine",
-                "index": 0
-            },
-            {
                 "url": "https://www.youtube.com/embed/LZRHYp73GlA?enablejsapi=1&wmode=opaque",
                 "poster": "img_10.png",
                 "name": "Tell Me If You Wanna Go Home lyrics by Keira Knightley",
